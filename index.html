@@ -1,56 +1,91 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <link  href="style.css" rel="stylesheet">
-    <meta name="viewport" content="initial-scale=1, width=device-width">
-    <link  href="style.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <title>Drayton Arch 3D Mesh</title>
-    <style>
-        body { margin: 0; }
-    </style>
-  <script type="module" crossorigin src="/assets/index-B8ksnh9Y.js"></script>
-</head>
-<body>
+<html>
 
-  <div class="menu">
-    <div id="left-side">
-        <div class="logo-holder">
-            <img src="images/logo.png" id="logo" alt="">
-        </div>
-    </div>
-    <div id="right-side">
-        <div class="menucontainer" id="homebox">
-            <a href="index.html"><div class="container-text">Home</div></a>
-            <div class="scroller-holder">
-                <div class="scroller"></div>
+    <head>
+        <!-- Using the meta tag to make mobile friendly -->
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+        <link  href="style.css" rel="stylesheet">
+        <title>Website Title</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    </head>
+
+    <body>
+
+        <div class="menu">
+            <div id="left-side">
+                <div class="logo-holder">
+                    <img src="images/logo.png" id="logo" alt="">
+                </div>
+            </div>
+            <div id="right-side">
+                <div class="menucontainer" id="homebox">
+                    <a href="index.html"><div class="container-text">Home</div></a>
+                    <div class="scroller-holder">
+                        <div class="scroller"></div>
+                    </div>
+                </div>
+                <div class="menucontainer" id="projectbox">
+                    <a href="projects.html"><div class="container-text">Projects</div></a>
+                    <div class="scroller-holder">
+                        <div class="scroller"></div>
+                    </div>
+                </div>
+                <div class="menucontainer" id="aboutbox">
+                    <!-- THIS NEEDS EDITING -->
+                    <div class="container-text">About</div>
+                    <div class="scroller-holder">
+                        <div class="scroller"></div>
+                    </div>
+                </div>
+                <div class="mobile-box">
+                    <i class="fa fa-bars"></i>
+                </div>
             </div>
         </div>
-        <div class="menucontainer" id="projectbox">
-          <a href="projects.html"><div class="container-text">Projects</div></a>
-          <div class="scroller-holder">
-              <div class="scroller"></div>
-          </div>
-      </div>
-      <div class="menucontainer" id="aboutbox">
-          <!-- THIS NEEDS EDITING -->
-          <a href="index.html"><div class="container-text">About</div></a>
-          <div class="scroller-holder">
-              <div class="scroller"></div>
-          </div>
-      </div>
-        <div class="mobile-box">
-            <i class="fa fa-bars"></i>
+
+        <div class="video_holder">
+            <video width="100%" height="100%" autoplay muted preload="auto" playsinline>
+                <source src="videos/desert.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
         </div>
-    </div>
-  </div>
 
+        <div class="container">
+            <div class="container-box left">
+                <div class="infobox a padded">
+                    <h1>Info box header</h1>
+                    <p1>The description for the info box goes here.</p1>
+                </div>
+            </div>
 
+            <div class="container-box right">
+                <div class="infobox a">
+                    <img src="images/image1.jpg" class="infoimg rightimg" alt="">
+                </div>
+            </div>
+
+            <div class="container-box left">
+                <div class="infobox a">
+                    <img src="images/image2.jpg" class="infoimg leftimg" alt="">
+                </div>
+            </div>
+
+            <div class="container-box right">
+                <div class="infobox a padded">
+                    <h1>Info box header</h1>
+                    <p1>The description for the info box goes here.</p1>
+                </div>
+
+            </div>
+            
+
+        </div>
+
+        <script src="menubar.js"></script>
         <!-- Handles highlight bars under topmenu -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {
@@ -109,5 +144,6 @@
         </script>
 
 
-</body>
+    </body>
+
 </html>
