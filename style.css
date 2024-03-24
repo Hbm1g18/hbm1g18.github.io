@@ -169,3 +169,8 @@ video {
 .show {
     opacity: 1;
 }
+#CanvasContainer{
+    background-color: aqua;
+    width: 800px;
+    height: 600px;
+}
