@@ -94,9 +94,7 @@
                     var containerText = menuContainer.querySelector('.container-text');
                     var scrollerHolder = menuContainer.querySelector('.scroller-holder');
 
-                    // Get the computed width of .container-text
                     var containerTextWidth = window.getComputedStyle(containerText).width;
-
                     // Set the width of .scroller-holder to match the width of .container-text
                     scrollerHolder.style.width = containerTextWidth;
                 });

@@ -18,6 +18,63 @@
 </head>
 <body>
 
+        <!-- Handles highlight bars under topmenu -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var menuContainers = document.querySelectorAll('#right-side .menucontainer');
+
+                menuContainers.forEach(function(menuContainer) {
+                    var containerText = menuContainer.querySelector('.container-text');
+                    var scrollerHolder = menuContainer.querySelector('.scroller-holder');
+
+                    var containerTextWidth = window.getComputedStyle(containerText).width;
+                    // Set the width of .scroller-holder to match the width of .container-text
+                    scrollerHolder.style.width = containerTextWidth;
+                });
+            });
+        </script>
+        <!-- Handles window resize and top menu accessibility -->
+        <script>
+            function handleResize() {
+                var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        
+                var menuContainers = document.querySelectorAll('#right-side .menucontainer');
+                var hamburger = document.querySelector('.mobile-box');
+                var rightside = document.getElementById('right-side');
+                var containerBoxes = document.querySelectorAll('.container .container-box');
+                var small_logo = document.querySelector('.logo-holder');
+        
+                menuContainers.forEach(function(menuContainer) {
+        
+                    if (windowWidth < 900) {
+                        menuContainer.style.display = 'none';
+                        hamburger.style.display = 'flex';
+                        rightside.style.justifyContent = 'right';
+                        small_logo.style.top = '0';
+        
+                        // Set the width of each .container-box to 98vw
+                        containerBoxes.forEach(function(containerBox) {
+                            containerBox.style.width = '98%';
+                        });
+                    } else {
+                        menuContainer.style.display = '';
+                        hamburger.style.display = '';
+                        rightside.style.justifyContent = 'space-evenly';
+                        small_logo.style.top = '50'
+        
+                        // Reset the width of each .container-box
+                        containerBoxes.forEach(function(containerBox) {
+                            containerBox.style.width = '';
+                        });
+                    }
+                });
+            }
+        
+            handleResize();
+        
+            window.addEventListener('resize', handleResize);
+        </script>
+
 
 </body>
 </html>
