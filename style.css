@@ -137,6 +137,11 @@ video {
 .a{
     height: 70%;
 }
+
+.a p1{
+    text-align: center;
+}
+
 .b{
     height: 30%;
 }
