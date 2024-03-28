@@ -114,7 +114,8 @@ video {
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 100px;
+    margin-top: 150px;
+    padding-bottom: 5vh;
 }
 
 .container-box {
@@ -124,10 +125,16 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* margin-top: 200px; */
+    margin-top: 100px;
 }
+
+.project{
+    transition: 0.2s ease-in-out;
+}
+
 .project:hover{
     cursor: pointer;
+    transform: scale(1.02);
 }
 
 .infobox{
@@ -186,4 +193,25 @@ video {
     border-style: solid;
     border-width: 10px;
     border-color: black;
+}
+
+.header_area{
+    font-family: 'Helvetica Arial', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 60vw;
+}
+.header_area h1{
+    font-size: 5vh;
+}
+.header_area p1{
+    font-size: 3vh;
+    margin-top: 2vh;
+}
+.post_img{
+    width: 40vw;
+    height: 45vh;
 }
