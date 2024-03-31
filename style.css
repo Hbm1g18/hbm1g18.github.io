@@ -228,13 +228,14 @@ video {
 .section_ttl{
     font-size: 3vh;
     font-weight: bold;
+    margin-top: 0.5vh;
 }
 .section_body{
     font-size: 2.5vh;
 }
 .post_img_right{
     width: 30vw;
-    height: 35vh;
+    height: 32h;
     margin-left: 2vw;
 }
 .section_body_left{
@@ -242,10 +243,26 @@ video {
     width: 28vw;
 }
 .video_holder_post{
-    margin-top: 1vh;
+    margin-top: 0.5vh;
     width: 60vw;
     position: relative;
     overflow: hidden;
     aspect-ratio: 16 / 9;
     margin-top: 100px;
+}
+.blue{
+    color: blue;
+    font-weight: bold;
+}
+#footer{
+    margin-top: 2vh;
+    width: 80vw;
+    font-family: 'Helvetica Arial', sans-serif;
+    color: rgb(78, 78, 78);
+}
+#footercontents{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    font-size: 2vh;
 }
