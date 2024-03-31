@@ -54,9 +54,9 @@
   <div class="container">
 
     <div class="header_area">
-        <h1>Visualising 3D Geospatial Data</h1>
+        <h1>Drone Captured 3D Mesh Visualisation</h1>
         <img src="images/rendered_both.png" class="post_img" alt="Drayton Arch Mesh">
-        <p1>Using drone captured imagery to recreate 3D models as meshes. The use of pointcloud visualisation and creating 3D scenes using Blender.</p1>
+        <p1>Using drone captured imagery to recreate 3D models as meshes. Creating scenes for viewing in Blender or on the web.</p1>
     </div>
     <div class="body_post">
         <hr>
@@ -65,7 +65,56 @@
                 Drone Photogrammetry Processing
             </h>
             <p class="section_body">
-                For the example mesh of Drayton Arch, 72 photographs were processed.
+                For the example mesh of Drayton Arch, 72 photographs were processed. 
+                Photos were taken with a DJI Mavic 3E flown manually with varying camera angles. 
+                Photos taken attempt to cover the full extent of the structure as much as possible at different viewing angles for more precise mesh generation.
+            </p>
+            <h class="section_ttl">
+                1)
+            </h>
+            <p class="section_body">
+                There are a number of processing software available for this project.
+                This example uses both Pix4D Mapper (Paid Software) and Meshroom (Opensource project).
+                The image directory was brought in where both programs read the metadata to extract information regarding the photos.
+                Meshroom is more suited for producing mesh objects - as the name implies. It is possible to retrieve the pointcloud information from this but the intention of the project is the mesh. 
+                Georeferencing was also not completed in Meshroom. For this, Pix4D is best. However, in this project no ground control was used as just producing a high resolution mesh was the goal.
+            </p>
+            <h1>INCLUDE A SCREENIE OF PIX4D AND MESHROOM HERE</h1>
+            <p class="section_body">
+                For creating just a mesh from the captured imagery the process is quite automated from here. After changing a few settings to increase point cloud density and number of matches,
+                 the images were processed by the program to produce both an RGB point cloud as well as a textured mesh as .obj file. Playing around with point cloud data will be covered in another post.
+            </p>
+            <h class="section_ttl">
+                2)
+            </h>
+            <p class="section_body">
+                Once the processing has finished, the mesh file will be generated as .obj with a texture JPEG or PNG which is used by the .mtl file.
+                This is now able to be viewed in various programs such as CloudCompare, Blender or even within Pix4d/Meshroom themselves.
+                This could be the end result and left here. But I will look at creating a scene for rendering images or hosting on the web as in the example below.
+            </p>
+            <p class="section_body">
+                Within blender the .obj file was imported. It may seem like there is no texture but this is shown in rendered view to save on resources. I have added in a basemap using 
+                the blender addon 'Blender GIS'. More information on this addon will be available in a future post. 
+                Using Blender GIS I have added two meshes with both Google Earth satellite imagery and OSM imagery draped onto it.
+                The image below shows the Google Earth result whereas the interactive example below is using the OSM drape.
+            </p>
+            <p class="section_body_left">
+                Blender was also used to create the animation in the video below. By setting keyframes at
+                camera positions along a generated path, the relevant image frames were able to be rendered and put together in
+                 video editing software. Blender can also be explored for more options in lighting and bringing in other components.
+            </p>
+            <img src="images/Textured.png" class="post_img_right" alt="Drayton Arch Mesh">
+            <div class="video_holder_post">
+                <video width="100%" height="100%" controls>
+                    <source src="videos/ArchwayVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <h class="section_ttl">
+                3)
+            </h>
+            <p class="section_body">
+                Preparing the files for the web was done using ThreeJS - a 3D Javascript library.
             </p>
         </div>
     </div>
@@ -77,7 +126,7 @@
 
   </div>
 
-
+        <script src="menubar.js"></script>
         <!-- Handles highlight bars under topmenu -->
         <script>
             document.addEventListener("DOMContentLoaded", function() {

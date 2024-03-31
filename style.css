@@ -221,6 +221,9 @@ video {
 }
 .body_section{
     margin-top: 5vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 .section_ttl{
     font-size: 3vh;
@@ -228,4 +231,21 @@ video {
 }
 .section_body{
     font-size: 2.5vh;
+}
+.post_img_right{
+    width: 30vw;
+    height: 35vh;
+    margin-left: 2vw;
+}
+.section_body_left{
+    font-size: 2.5vh;
+    width: 28vw;
+}
+.video_holder_post{
+    margin-top: 1vh;
+    width: 60vw;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    margin-top: 100px;
 }
