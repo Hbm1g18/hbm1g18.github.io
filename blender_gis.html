@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link  href="style.css" rel="stylesheet">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <link  href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic+Coding&display=swap" rel="stylesheet">
+    
+    <title>Blender GIS Addon Overview</title>
+    <style>
+        body { margin: 0; }
+    </style>
+  <script type="module" crossorigin src="/assets/index-CyE8K1ti.js"></script>
+</head>
+<body>
+
+  <div class="menu">
+    <div id="left-side">
+        <div class="logo-holder">
+            <img src="images/logo.png" id="logo" alt="">
+        </div>
+    </div>
+    <div id="right-side">
+        <div class="menucontainer" id="homebox">
+            <a href="index.html"><div class="container-text">Home</div></a>
+            <div class="scroller-holder">
+                <div class="scroller"></div>
+            </div>
+        </div>
+        <div class="menucontainer" id="projectbox">
+          <a href="projects.html"><div class="container-text">Projects</div></a>
+          <div class="scroller-holder">
+              <div class="scroller"></div>
+          </div>
+      </div>
+      <div class="menucontainer" id="aboutbox">
+          <!-- THIS NEEDS EDITING -->
+          <div class="container-text">About</div>
+          <div class="scroller-holder">
+              <div class="scroller"></div>
+          </div>
+      </div>
+        <div class="mobile-box">
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+
+    <div class="header_area">
+        <h1>Blender GIS Addon Overview</h1>
+        <img src="images/Daqingshan.png" class="post_img" alt="Drayton Arch Mesh">
+        <p1>Installation and quick overview for the Blender GIS Addon for visualising geospatial data.</p1>
+    </div>
+    <div class="body_post">
+        <hr>
+        <div class="body_section">
+            <h class="section_ttl">
+                About + Installation
+            </h>
+            <p class="section_body">
+                <a class="blue" href="https://www.blender.org">Blender</a> is a free and open source piece of software most commonly used for 3D modelling and animation.
+                It offers a vast array of tools for producing anything you can imagine. With the inclusion of python scripting
+                this can be taken further and has been by <a class="blue" href="https://github.com/domlysz">domlysz</a> on GitHub. 
+                <a class="blue" href="https://github.com/domlysz/BlenderGIS">Blender GIS</a> is an addon built to '<span class="quote">make the bridge
+                between Blender and geographic data</span>'.
+                <br>This will serve as a quick overview of features provided by the addon and a step-by-step installation process.
+                I will go over:
+                <ul>
+                    <li>Bringing in Webmap imagery</li>
+                    <li>Adding 3D relief to imagery</li>
+                    <li>Including OpenStreetMap data</li>
+                    <li>Using custom 3D datasets</li>
+                    <li>Rendering a final scene</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+
+    <div id="footer">
+        <hr>
+        <div id="footercontents">
+            <a href="https://www.linkedin.com/in/harry-bonshor-mayes-5a2236199/"><i class="fa fa-linkedin-square" style="color: rgb(0, 115, 255);"></i> LinkedIn</a>
+        </div>
+    </div>
+
+
+  </div>
+
+        <script src="menubar.js"></script>
+        <!-- Handles highlight bars under topmenu -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                var menuContainers = document.querySelectorAll('#right-side .menucontainer');
+
+                menuContainers.forEach(function(menuContainer) {
+                    var containerText = menuContainer.querySelector('.container-text');
+                    var scrollerHolder = menuContainer.querySelector('.scroller-holder');
+
+                    var containerTextWidth = window.getComputedStyle(containerText).width;
+                    // Set the width of .scroller-holder to match the width of .container-text
+                    scrollerHolder.style.width = containerTextWidth;
+                });
+            });
+        </script>
+        <!-- Handles window resize and top menu accessibility -->
+        <script>
+            function handleResize() {
+                var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+        
+                var menuContainers = document.querySelectorAll('#right-side .menucontainer');
+                var hamburger = document.querySelector('.mobile-box');
+                var rightside = document.getElementById('right-side');
+                var containerBoxes = document.querySelectorAll('.container .container-box');
+                var small_logo = document.querySelector('.logo-holder');
+        
+                menuContainers.forEach(function(menuContainer) {
+        
+                    if (windowWidth < 900) {
+                        menuContainer.style.display = 'none';
+                        hamburger.style.display = 'flex';
+                        rightside.style.justifyContent = 'right';
+                        small_logo.style.top = '0';
+        
+                        // Set the width of each .container-box to 98vw
+                        containerBoxes.forEach(function(containerBox) {
+                            containerBox.style.width = '98%';
+                        });
+                    } else {
+                        menuContainer.style.display = '';
+                        hamburger.style.display = '';
+                        rightside.style.justifyContent = 'space-evenly';
+                        small_logo.style.top = '50'
+        
+                        // Reset the width of each .container-box
+                        containerBoxes.forEach(function(containerBox) {
+                            containerBox.style.width = '';
+                        });
+                    }
+                });
+            }
+        
+            handleResize();
+        
+            window.addEventListener('resize', handleResize);
+        </script>
+
+
+</body>
+</html>

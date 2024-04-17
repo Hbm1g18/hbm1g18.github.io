@@ -271,8 +271,17 @@ video {
     font-style: normal;
     color: rgb(255, 255, 255);
     font-size: 2.5vh;
-}
-.section_body span{
     background-color: rgb(47, 47, 47);
     padding-inline: 5px;
+}
+
+.quote{
+    font-family: 'Helvetica Arial', sans-serif;
+    font-weight: bold;
+    font-style: italic;
+}
+ul {
+    font-family: 'Helvetica Arial', sans-serif;
+    font-size: 2.5vh;
+    margin-inline: auto;
 }
