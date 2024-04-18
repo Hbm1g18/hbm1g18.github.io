@@ -288,7 +288,7 @@ ul {
 }
 .small_img{
     width: 40vw;
-    height: 40vh;
+    /* height: 40vh; */
     overflow: hidden;
     margin-inline: auto;
 }

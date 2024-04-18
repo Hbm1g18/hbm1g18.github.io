@@ -113,12 +113,31 @@
                 go down to Web geodata -> Basemap.
                 <br>
                 <br>Here you will have the choice of a number of sources for imagery, in this example I will use Google Earth imagery.
-                The view will open up to the world, here you can zoom in to the location you and looking for. As you zoom, more tiles will be loaded.
+                The view will open up to the world, here you can zoom in to the location you and looking for.  Middle mouse can be used for panning around.
+                Another option is to press <span class="quote">G</span>, this will bring up the search tool where you can specify a location and a 
+                zoom amount.<br>As you zoom, more tiles will be loaded.
                 If you have a large area, the resolution may not be as good as you would wish. For this, you can press <span class="quote">L</span> which will lock the view.
                 From here you wont see the changes other than the number of tiles increasing, but you can continue to zoom in to increase the scroll level or by pressing <span class="quote">Numpad +</span>.
                 Increasing the zoom will increase the number of tiles for the mosaic when at a larger scale and produces a large file size.
                 <br><br>Once you are happy with the selection you can press <span class="quote">E</span> to produce the mosaic. Depending on your computer or the size of the area, this could take a while.
+                Once this is complete you will see your selected area on a plane mesh in the 3D view.
             </p>
+            <h class="section_ttl">Adding 3D relief to imagery</h>
+            <p class="section_body">
+                In the same dropdown as the Basemap, we can find the <span class="quote">Get Elevation</span>.
+                This option uses <a class="blue" href="https://opentopography.org">OpenTopography</a> and will require an account and 
+                API key. First do this and then continue on.
+                <br>With your plane selected, use this option to bring in the 30m SRTM dataset.
+            </p>
+            <div class="small_img"><img src="images/blender_gis_relief.png" alt="bringing in webmap"></div>
+            <p class="section_body">
+                Once this completes (time will vary depending on size of area) you will have a displacement texture applied to the plane that adds relief.
+            </p>
+            <p class="section_body_left">
+                Once you have the 3D data you can play around with attributes such as the scale for virtual exaggeration. This is done in the <span class="quote">Object Properties</span> tab.
+                Shown on the right is sliding the Z scale attribute up and down.
+            </p>
+            <img src="images/slider.gif" class="post_img_right" alt="Vertical exaggeration">
         </div>
     </div>
 
