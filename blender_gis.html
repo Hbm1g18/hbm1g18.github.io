@@ -56,7 +56,7 @@
 
     <div class="header_area">
         <h1>Blender GIS Addon Overview</h1>
-        <img src="images/Daqingshan.png" class="post_img" alt="Drayton Arch Mesh">
+        <img src="images/Daqingshan.png" class="post_img" alt="Daqingshan model">
         <p1>Installation and quick overview for the Blender GIS Addon for visualising geospatial data.</p1>
     </div>
     <div class="body_post">
@@ -80,6 +80,44 @@
                     <li>Using custom 3D datasets</li>
                     <li>Rendering a final scene</li>
                 </ul>
+            </p>
+            <br>
+            <h class="section_ttl">
+                Installation
+            </h>
+            <p class="section_body">
+                In my experience, the Blender GIS addon only works on specific versions. These versions vary depending if you're
+                on MacOS or Windows.<br>
+                The versions I found to work were <a class="blue" href="https://www.blender.org/download/releases/3-6/">Blender 3.6 on Windows 10</a>
+                and <a class="blue" href="https://www.blender.org/download/releases/2-83/">Blender 2.83 on MacOS Sonoma 14.2.1</a>.<br>
+                Once Blender is installed you are ready to download the addon. Go to the <a class="blue" href="https://github.com/domlysz/BlenderGIS/releases">releases</a> 
+                tab and download v2.2.8 as a .zip file. 
+            </p>
+            <div class="small_img">
+                <img src="images/blender_gis_releases.png" alt="Releases tab">
+            </div>
+            <p class="section_body">
+                Now you're ready to install the addon. Open up blender and from the top bar go to Edit -> Preferences.<br>
+                Once here go to addons, as shown below, and then to install. Here you want to select your .zip file from earlier and install it into Blender.
+                After doing this, ensure you have ticked BlenderGIS to enable it.
+            </p>
+            <div class="large_img">
+                <img src="images/blender_gis_install.png" alt="Addons tab">
+            </div>
+            <div class="spacer"></div>
+            <h class="section_ttl">Bringing in Webmap imagery</h>
+            <div class="spacer"></div>
+            <div class="small_img"><img src="images/blender_gis_webmap.png" alt="bringing in webmap"></div>
+            <p class="section_body">
+                Now that the addon is installed, you will see that there is a new tab option titled "GIS". When clicking on this,
+                go down to Web geodata -> Basemap.
+                <br>
+                <br>Here you will have the choice of a number of sources for imagery, in this example I will use Google Earth imagery.
+                The view will open up to the world, here you can zoom in to the location you and looking for. As you zoom, more tiles will be loaded.
+                If you have a large area, the resolution may not be as good as you would wish. For this, you can press <span class="quote">L</span> which will lock the view.
+                From here you wont see the changes other than the number of tiles increasing, but you can continue to zoom in to increase the scroll level or by pressing <span class="quote">Numpad +</span>.
+                Increasing the zoom will increase the number of tiles for the mosaic when at a larger scale and produces a large file size.
+                <br><br>Once you are happy with the selection you can press <span class="quote">E</span> to produce the mosaic. Depending on your computer or the size of the area, this could take a while.
             </p>
         </div>
     </div>
